@@ -121,6 +121,11 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       transform: translate(-53px, 2px);
     }
 
+    .project-title {
+      top: 0;
+      right: 0;
+    }
+
     @media (max-width: 1235px) {
       #section-2 {
         min-height: 1200px;
@@ -136,14 +141,16 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       }
 
       .guild-title {
-        font-size: 3rem !important;
+        top: 120px;
+        left: -50px;
+        font-size: 4rem !important;
       }
 
       .project-title {
-        top: unset !important;
-        right: 60px !important;
-        bottom: 40px;
-        font-size: 3rem !important;
+        top: unset;
+        right: -132px;
+        bottom: -78px;
+        font-size: 4rem !important;
       }
     }
 
@@ -153,17 +160,24 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       }
 
       .zoom {
-        zoom: 0.5;
+        zoom: 0.45;
       }
 
       .guild-title {
         font-size: 6rem !important;
       }
 
+      .guild-title {
+        top: 78px;
+        left: -132px;
+        font-size: 6rem !important;
+      }
+
       .project-title {
-        top: unset !important;
-        right: 240px !important;
-        bottom: 40px;
+        top: unset;
+        right: unset;
+        left: 26px;
+        bottom: -195px;
         font-size: 6rem !important;
       }
     }
@@ -293,10 +307,10 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       <div class="zoom">
         <!-- Present projects -->
         <!-- Projects part 1 -->
-        <div class="text-8xl absolute top-4 left-4 guild-title">
-          GUILDS
-        </div>
         <div class="guilds">
+          <div class="text-8xl absolute guild-title">
+            GUILDS
+          </div>
           <div class="hex-row">
             <div class="hex-hide">
             </div>
@@ -344,10 +358,10 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
           </div>
         </div>
         <!-- Projects part 2 -->
-        <div class="text-8xl absolute top-20 right-10 red bankless-red project-title">
-          PROJECTS
-        </div>
         <div class="projects">
+          <div class="text-8xl absolute red bankless-red project-title">
+            PROJECTS
+          </div>
           <div class="hex-row">
             <div class="hex-hide">
             </div>
