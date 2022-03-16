@@ -147,6 +147,27 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       }
     }
 
+    @media (max-width: 800px) {
+      #section-2 {
+        min-height: auto;
+      }
+
+      .zoom {
+        zoom: 0.5;
+      }
+
+      .guild-title {
+        font-size: 6rem !important;
+      }
+
+      .project-title {
+        top: unset !important;
+        right: 240px !important;
+        bottom: 40px;
+        font-size: 6rem !important;
+      }
+    }
+
     .guilds .hex .middle {
       background: white;
     }
@@ -190,21 +211,8 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       height: 208px;
     }
 
-    .guilds .hex::after {
+    .hex::after {
       content: "";
-      background-image: url(https://gobankless.ghost.io/content/images/2021/10/Education-Guild-Bankless-DAO-.png);
-      width: 200px;
-      height: 200px;
-      display: block;
-      position: absolute;
-      background-size: contain;
-      background-repeat: no-repeat;
-      transform: translate(17px, 6px);
-    }
-
-    .projects .hex::after {
-      content: "";
-      background-image: url(assets/images/BA.png);
       width: 200px;
       height: 200px;
       display: block;
@@ -212,6 +220,14 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       background-size: contain;
       background-repeat: no-repeat;
       transform: translate(20px, 4px);
+    }
+
+    .guilds .hex::after {
+      background-image: url(https://gobankless.ghost.io/content/images/2021/10/Education-Guild-Bankless-DAO-.png);
+    }
+
+    .projects .hex::after {
+      background-image: url(assets/images/BA.png);
     }
 
     .hex .right {
@@ -274,106 +290,108 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       </div>
     </section>
     <section id="section-2" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start overflow-hidden">
-      <!-- Present projects -->
-      <!-- Projects part 1 -->
-      <div class="text-8xl absolute top-4 left-4 guild-title">
-        GUILDS
-      </div>
-      <div class="guilds">
-        <div class="hex-row">
-          <div class="hex-hide">
+      <div class="zoom">
+        <!-- Present projects -->
+        <!-- Projects part 1 -->
+        <div class="text-8xl absolute top-4 left-4 guild-title">
+          GUILDS
+        </div>
+        <div class="guilds">
+          <div class="hex-row">
+            <div class="hex-hide">
+            </div>
+            <div class="hex even">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex-hide">
+            </div>
           </div>
-          <div class="hex even">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
+          <div class="hex-row">
+            <div class="hex">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex even">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
           </div>
-          <div class="hex-hide">
+          <div class="hex-row">
+            <div class="hex">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex even">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
           </div>
         </div>
-        <div class="hex-row">
-          <div class="hex">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-          <div class="hex even">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-          <div class="hex">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
+        <!-- Projects part 2 -->
+        <div class="text-8xl absolute top-20 right-10 red bankless-red project-title">
+          PROJECTS
         </div>
-        <div class="hex-row">
-          <div class="hex">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
+        <div class="projects">
+          <div class="hex-row">
+            <div class="hex-hide">
+            </div>
+            <div class="hex even">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex-hide">
+            </div>
           </div>
-          <div class="hex even">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
+          <div class="hex-row">
+            <div class="hex">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex even">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
           </div>
-          <div class="hex">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-        </div>
-      </div>
-      <!-- Projects part 2 -->
-      <div class="text-8xl absolute top-20 right-10 red bankless-red project-title">
-        PROJECTS
-      </div>
-      <div class="projects">
-        <div class="hex-row">
-          <div class="hex-hide">
-          </div>
-          <div class="hex even">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-          <div class="hex-hide">
-          </div>
-        </div>
-        <div class="hex-row">
-          <div class="hex">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-          <div class="hex even">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-          <div class="hex">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-        </div>
-        <div class="hex-row">
-          <div class="hex">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-          <div class="hex even">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-          </div>
-          <div class="hex">
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
+          <div class="hex-row">
+            <div class="hex">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex even">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
+            <div class="hex">
+              <div class="left"></div>
+              <div class="middle"></div>
+              <div class="right"></div>
+            </div>
           </div>
         </div>
       </div>
