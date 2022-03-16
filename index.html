@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+
+  /$$$$$ /$$   /$$  /$$$$$$  /$$$$$$$$       /$$$$$$$   /$$$$$$   /$$$$$$        /$$$$$$ /$$$$$$$$
+  |__  $$| $$  | $$ /$$__  $$|__  $$__/      | $$__  $$ /$$__  $$ /$$__  $$      |_  $$_/|__  $$__/
+     | $$| $$  | $$| $$  \__/   | $$         | $$  \ $$| $$  \ $$| $$  \ $$        | $$     | $$   
+     | $$| $$  | $$|  $$$$$$    | $$         | $$  | $$| $$$$$$$$| $$  | $$        | $$     | $$   
+/$$  | $$| $$  | $$ \____  $$   | $$         | $$  | $$| $$__  $$| $$  | $$        | $$     | $$   
+| $$  | $$| $$  | $$ /$$  \ $$   | $$         | $$  | $$| $$  | $$| $$  | $$        | $$     | $$   
+|  $$$$$$/|  $$$$$$/|  $$$$$$/   | $$         | $$$$$$$/| $$  | $$|  $$$$$$/       /$$$$$$   | $$   
+\______/  \______/  \______/    |__/         |_______/ |__/  |__/ \______/       |______/   |__/
+
+Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
+
+-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Primary Meta Tags -->
+  <title>Season 4 | BanklessDAO</title>
+  <meta name="title" content="Season 4 | BanklessDAO" />
+  <meta name="description" content="You are invite for BanklessDAO 🏴 Season 4 launch 🚀" />
+  <!-- Open Graph / Facebook (needs to be < 300kb to work on WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://season4.bankless.community/" />
+  <meta property="og:title" content="Season 4 | BanklessDAO" />
+  <meta property="og:description" content="You are invite for BanklessDAO 🏴 Season 4 launch 🚀" />
+  <meta property="og:image" content="https://season4.bankless.community/assets/images/season4-invitation.jpg?v1" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="330" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="https://season4.bankless.community/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Season 4 | BanklessDAO" />
+  <meta name="twitter:description" content="You are invite for BanklessDAO 🏴 Season 4 launch 🚀" />
+  <meta name="twitter:image" content="https://season4.bankless.community/assets/images/season4-invitation.jpg?v1" />
+  <!-- favicons -->
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="33x33" href="favicon.png" />
+  <link rel="apple-touch-icon" type="image/png" sizes="33x33" href="favicon.png" />
+  <!-- style -->
+  <style type="text/css">
+    @font-face {
+      font-family: "Clear Sans Bold";
+      src: url(assets/fonts/ClearSans-Bold.woff);
+    }
+
+    #section-1 {
+      background-image: url(assets/videos/S01-Rocket-Launch-v3.webp);
+    }
+
+    #section-3 {
+      background-image: url(assets/videos/S03A_Background_v3.gif);
+    }
+
+    iframe,
+    video {
+      width: 100vw;
+      /* 9/16*100 because video ratio is 16/9 */
+      height: 56.25vw;
+    }
+
+    video {
+      display: block !important;
+    }
+
+    iframe {
+      display: none !important;
+    }
+
+    /* mobile + tablet optimization */
+    @media (max-width: 1024px) {
+      #section-1 {
+        background-image: url(assets/videos/S01_Rocket_Launch_v3.gif);
+      }
+
+      video {
+        display: none !important;
+      }
+
+      iframe {
+        display: block !important;
+      }
+    }
+
+    .bankless-red-underline {
+      padding-bottom: 0.10em;
+      border-bottom: 0.15em #D02128 solid;
+    }
+
+    .bankless-red-left {
+      border-left: 0.3em #D02128 solid;
+      padding-left: 1em;
+    }
+
+    .bankless-bg-red {
+      background-color: #D02128;
+    }
+
+    .bankless-red {
+      color: #D02128;
+    }
+
+    .bankless-font {
+      font-family: "Clear Sans Bold";
+    }
+
+    /* Hexagone style from https://jtauber.github.io/articles/css-hexagon.html */
+    .guilds {
+      float: left;
+      width: 616px;
+      transform: translate(0, -104px);
+    }
+
+    .projects {
+      float: left;
+      width: 616px;
+      transform: translate(-53px, 2px);
+    }
+
+    @media (max-width: 1235px) {
+      #section-2 {
+        min-height: 1200px;
+      }
+
+      .guilds {
+        transform: translate(100px, -380px);
+      }
+
+      .projects {
+        transform: translate(-86px, 156px);
+        position: absolute;
+      }
+
+      .guild-title {
+        font-size: 3rem !important;
+      }
+
+      .project-title {
+        top: unset !important;
+        right: 60px !important;
+        bottom: 40px;
+        font-size: 3rem !important;
+      }
+    }
+
+    .guilds .hex .middle {
+      background: white;
+    }
+
+    .guilds .hex .left {
+      border-right: 60px solid white;
+    }
+
+    .guilds .hex .right {
+      border-left: 60px solid white;
+    }
+
+    .projects .hex .middle {
+      background: #D02128;
+    }
+
+    .projects .hex .left {
+      border-right: 60px solid #D02128;
+    }
+
+    .projects .hex .right {
+      border-left: 60px solid #D02128;
+    }
+
+    .hex {
+      float: left;
+      margin-right: -52px;
+      margin-bottom: -100px;
+    }
+
+    .hex .left {
+      float: left;
+      width: 0;
+      border-top: 104px solid transparent;
+      border-bottom: 104px solid transparent;
+    }
+
+    .hex .middle {
+      float: left;
+      width: 120px;
+      height: 208px;
+    }
+
+    .guilds .hex::after {
+      content: "";
+      background-image: url(https://gobankless.ghost.io/content/images/2021/10/Education-Guild-Bankless-DAO-.png);
+      width: 200px;
+      height: 200px;
+      display: block;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translate(17px, 6px);
+    }
+
+    .projects .hex::after {
+      content: "";
+      background-image: url(assets/images/BA.png);
+      width: 200px;
+      height: 200px;
+      display: block;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translate(20px, 4px);
+    }
+
+    .hex .right {
+      float: left;
+      width: 0;
+      border-top: 104px solid transparent;
+      border-bottom: 104px solid transparent;
+    }
+
+    .hex-row {
+      clear: left;
+    }
+
+    .hex.even {
+      margin-top: 106px;
+    }
+
+    .hex-hide {
+      float: left;
+      width: 188px;
+      height: 208px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="max-h-screen overflow-y-scroll snap snap-y snap-mandatory text-white">
+    <section id="section-1" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start">
+      <audio id="audio" loop autoplay>
+        <source src="assets/audio/BL_S03_Invite_Soundtrack.mp3" type="audio/mpeg">
+      </audio>
+      <!-- Intro -->
+      <div class="absolute max-w-[100%] bankless-font">
+        <div class="text-8xl font-bold max-w-[90%] fit">
+          BANKLESS&nbsp;<span class="bankless-red-underline">DAO</span>
+        </div>
+        <div class="grid grid-rows-2 grid-flow-col items-center gap-4 float-right w-fit mt-20 text-4xl font-bold">
+          <div class="col-span-1">Season</div>
+          <div class="row-span-1 col-span-1">Launch</div>
+          <div class="row-span-2 text-9xl bankless-red">4</div>
+        </div>
+      </div>
+      <!-- Season 4 Launch -->
+      <div class="absolute bottom-20 left-10 bankless-red-left">
+        <div>Season 4 Launch</div>
+        <p>Join us on Twitter spaces, <span class="date">January 21 2022</span>
+          <br />RSVP below 👇
+          <br />The possibilities of a DAO are endless!
+        </p>
+      </div>
+      <!-- Arrow down -->
+      <div class="absolute bottom-5 right-5" style="text-align: -webkit-right">
+        <div class="animate-bounce w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
+          </svg>
+        </div>
+        scroll down
+      </div>
+    </section>
+    <section id="section-2" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start overflow-hidden">
+      <!-- Present projects -->
+      <!-- Projects part 1 -->
+      <div class="text-8xl absolute top-4 left-4 guild-title">
+        GUILDS
+      </div>
+      <div class="guilds">
+        <div class="hex-row">
+          <div class="hex-hide">
+          </div>
+          <div class="hex even">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex-hide">
+          </div>
+        </div>
+        <div class="hex-row">
+          <div class="hex">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex even">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+        </div>
+        <div class="hex-row">
+          <div class="hex">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex even">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Projects part 2 -->
+      <div class="text-8xl absolute top-20 right-10 red bankless-red project-title">
+        PROJECTS
+      </div>
+      <div class="projects">
+        <div class="hex-row">
+          <div class="hex-hide">
+          </div>
+          <div class="hex even">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex-hide">
+          </div>
+        </div>
+        <div class="hex-row">
+          <div class="hex">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex even">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+        </div>
+        <div class="hex-row">
+          <div class="hex">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex even">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <div class="hex">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Arrow down -->
+      <div class="absolute bottom-5 right-5" style="text-align: -webkit-right">
+        <div class="animate-bounce w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
+          </svg>
+        </div>
+        scroll down
+      </div>
+    </section>
+    <section id="section-3" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start">
+      <div class="absolute max-w-[92%] text-center p-10 bg-black/30 rounded-lg">
+        <div class="text-4xl font-bold fit">Season&nbsp;3&nbsp;Launch</div>
+        <div class="text-3xl mt-3">
+          <a title="Add to Calendar" target="_blank" href="https://season4.bankless.community/rsvp">
+            <div class="flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <div class="text-lg">
+                <span class="date ml-1">January 21 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="text-xl mt-4 mb-8">In <a class="twitter" target="_blank" href="https://twitter.com/BanklessHQ">Twitter
+            Spaces</a>
+        </div>
+        <div>
+          <div class="text-8xl font-bold fit bankless-font">BANKLESS</div>
+          <div class="flex justify-center text-7xl font-bold mt-8 text-center bankless-font">
+            <span class="bankless-red-underline">DAO</span>
+            <span class="bankless-red">+</span>
+            <span class="bankless-red-underline">HQ</span>
+          </div>
+          <div class="flex justify-center text-2xl font-bold mt-16 text-center">
+            <a class="rounded-full bankless-bg-red hover:bg-red-800 py-3 px-7 mr-4" target="_blank" href="https://www.notion.so/bankless/Season-3-Launch-January-21st-2022-11am-12-15pm-EST-024fcdf148aa4307b2e121738b2b8399">Agenda</a>
+            <a class="rounded-full bankless-bg-red hover:bg-red-800 py-3 px-7" target="_blank" href="https://season4.bankless.community/rsvp">RSVP</a>
+          </div>
+        </div>
+    </section>
+  </main>
+  <!-- javascript -->
+  <script async defer data-website-id="b8e9e4c4-3bca-4661-b383-12a996c5415a" src="https://umami.bankless.community/umami.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js" integrity="sha512-vLs5rAqfvmv/IpN7JustROkGAvjK/L+vgVDFe7KpdtLztqF8mZDfleK2MZj/xuOrWjma0pW+lPCMcBbPKJVC7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-2012-2022.min.js" integrity="sha512-xFvEGAiMhvg1LBpa1KLutjlVHXSfe7Fq9dpAFqkRoSb31oZXIBTCxxhdmoXtJBbiQJk3RDu1GYfb8+OWqF9ehA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript">
+    // autoplay audio
+    $(function () {
+      $("body").click(function (event) {
+        document.getElementById('audio').play()
+      })
+    })
+    // resize text if window width < 1000px
+    if (window.innerWidth < 1000)
+      textFit(document.getElementsByClassName('fit'))
+    // dynamic launch time based on user timezone
+    const season2LaunchEventTimeInIST = moment.tz("2022-01-21 11:00", "America/New_York")
+    const userTimeZone = moment.tz.guess(true);
+    const eventTimeMinutes = season2LaunchEventTimeInIST.tz(userTimeZone).format("mm")
+    $('.date').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("MMMM D YYYY"))
+    eventTimeMinutes === "00" ? $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("HH A z")) : $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("HH:mm A z"))
+  </script>
+</body>
+
+</html>
