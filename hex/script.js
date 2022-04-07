@@ -13,7 +13,7 @@ let camera = new THREE.PerspectiveCamera(
   0.1,
   100
 );
-camera.position.set(Math.PI / 2, 500, 0).setLength(10);
+camera.position.set(Math.PI / 2, 500, 0).setLength(6);
 let renderer = new THREE.WebGLRenderer({ antialias: false });
 renderer.setSize(innerWidth, innerHeight);
 renderer.shadowMap.enabled = true;
@@ -53,17 +53,17 @@ var material = [
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BanklessDAO Christmas.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BED Index Constellation Apparel.jpeg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BAnkless_20Africa_20ContinentLARGE_20-_20Medium.jpg') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless + Balancer Pool.jpeg') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless Balancer Pool.jpeg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless Academy MVP POAP.PNG') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless Academy.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless Consulting.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless WGMI Apparel.jpeg') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless+BED+Pickle Finance.jpeg') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BanklessDAO + HumanDAO.png') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BanklessBEDPickle Finance.jpeg') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BanklessDAO HumanDAO.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Book_Club_Genesis_POAP_DAOlogo.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Copper Launch AMA.jpeg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAO Heat Epoch 0 Winners NFT - The Rise of The DAO.png') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAO Punks + Hype POAP.PNG') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAO Punks Hype POAP.PNG') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAOTown.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Diamond Hands.jpeg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Fight_20Club_20POAP_20-_20Small.jpg') }),
