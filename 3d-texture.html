@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Hexagrid (InstancedMesh + shadows + selective bloom + DoF)</title>
+  <title>Dodecahedron with texture</title>
   <link rel="stylesheet" href="./hex/style.css">
 
 </head>
@@ -98,19 +98,6 @@
     renderer.setAnimationLoop(() => {
       renderer.render(scene, camera);
     })
-
-    animate();
-
-    function animate() {
-
-      requestAnimationFrame(animate);
-      if (group.rotation.y < 4) {
-        console.log(group.rotation.y)
-        group.rotation.y += 0.05;
-      }
-      render();
-
-    }
 
     function createTexture() {
       let c = document.createElement("canvas");
