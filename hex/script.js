@@ -20,7 +20,8 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 //renderer.setClearColor(0x224488);
 renderer.outputEncoding = THREE.sRGBEncoding;
-document.body.appendChild(renderer.domElement);
+// document.body.appendChild(renderer.domElement);
+document.getElementById("section-2").appendChild(renderer.domElement);
 
 let controls = new OrbitControls(camera, renderer.domElement);
 
@@ -45,6 +46,7 @@ let g = new THREE.CylinderBufferGeometry(0.5, 0.5, 0.1, 6);
 g.rotateX(Math.PI * 0.5);
 var folder = '/projects/'
 var material = [
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'bankless-logo.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BANKLESS-POAP.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BA.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAO Dash Logo.jpg') }),
@@ -57,7 +59,6 @@ var material = [
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless Consulting.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless WGMI Apparel.jpeg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless+BED+Pickle Finance.jpeg') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless-AAVE-Sneaker-Vid.mp4') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BanklessDAO + HumanDAO.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Book_Club_Genesis_POAP_DAOlogo.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Copper Launch AMA.jpeg') }),
@@ -84,14 +85,14 @@ var material = [
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'smartmockups_kyda1v8z.jpg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'smartmockups_kyda4c39.jpg') }),
 ];
-// var loader = new THREE.TextureLoader();
-// var texture = loader.load('assets/images/BA.png');
-// let m = new THREE.MeshStandardMaterial({
-//   color: 0xFFFFFF,
-//   map: texture,
-//   roughness: 0.75,
-//   metalness: 0.25
-// });
+var loader = new THREE.TextureLoader();
+var texture = loader.load('assets/images/BA.png');
+let m = new THREE.MeshStandardMaterial({
+  color: 0xFFFFFF,
+  map: texture,
+  roughness: 0.75,
+  metalness: 0.25
+});
 let hexUniforms = {
   time: { value: 0 },
   globalBloom: { value: 0 }
@@ -101,13 +102,13 @@ material.forEach((m) => {
 
   m.onBeforeCompile = (shader) => {
 
-    shader.uniforms.textures = {
-      'type': 'tv', value: [
-        new THREE.TextureLoader().load('https://threejs.org/examples/textures/crate.gif'),
-        new THREE.TextureLoader().load('https://threejs.org/examples/textures/equirectangular.png'),
-        new THREE.TextureLoader().load('https://threejs.org/examples/textures/colors.png')
-      ]
-    };
+    // shader.uniforms.textures = {
+    //   'type': 'tv', value: [
+    //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/crate.gif'),
+    //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/equirectangular.png'),
+    //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/colors.png')
+    //   ]
+    // };
     shader.uniforms.time = hexUniforms.time;
     shader.uniforms.globalBloom = hexUniforms.globalBloom;
     console.log(shader.vertexShader);
@@ -152,67 +153,86 @@ material.forEach((m) => {
 
   // m.onBeforeCompile = (shader) => {
 
-    // shader.uniforms.textures = {
-    //   'type': 'tv', value: [
-    //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/crate.gif'),
-    //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/equirectangular.png'),
-    //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/colors.png')
-    //   ]
-    // };
+  // shader.uniforms.textures = {
+  //   'type': 'tv', value: [
+  //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/crate.gif'),
+  //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/equirectangular.png'),
+  //     new THREE.TextureLoader().load('https://threejs.org/examples/textures/colors.png')
+  //   ]
+  // };
 
 
-    // shader.vertexShader = shader.vertexShader.replace(
-    //   '#define STANDARD',
-    //   `#define STANDARD
-    //         varying vec3 vTint;
-    //         varying float vtextures;`
-    // ).replace(
-    //   '#include <common>',
-    //   `#include <common>
-    //     attribute vec3 tint;
-    //     attribute float textures;`
-    // ).replace(
-    //   '#include <project_vertex>',
-    //   `#include <project_vertex>
-    //     vTint = tint;
-    //     vtextures=textures;`
-    // );
+  // shader.vertexShader = shader.vertexShader.replace(
+  //   '#define STANDARD',
+  //   `#define STANDARD
+  //         varying vec3 vTint;
+  //         varying float vtextures;`
+  // ).replace(
+  //   '#include <common>',
+  //   `#include <common>
+  //     attribute vec3 tint;
+  //     attribute float textures;`
+  // ).replace(
+  //   '#include <project_vertex>',
+  //   `#include <project_vertex>
+  //     vTint = tint;
+  //     vtextures=textures;`
+  // );
 
-    
-    // shader.fragmentShader = shader.fragmentShader.replace(
-    //   '#define STANDARD',
-    //   `#define STANDARD
-    //         uniform sampler2D textures[3];
-    //         varying vec3 vTint;
-    //         varying float vtextures;`
-    // )
-    //   .replace(
-    //     '#include <fog_fragment>',
-    //     `#include <fog_fragment>
-    //     float x = vtextures;
-    //     vec4 col;
-    //     col = texture2D(textures[0], vUv ) * step(-0.1, x) * step(x, 0.1);
-    //     // col += texture2D(textures[1], vUv ) * step(0.9, x) * step(x, 1.1);
-    //     // col += texture2D(textures[2], vUv ) * step(1.9, x) * step(x, 2.1);
 
-    //     gl_FragColor = col;
-    //     `
+  // shader.fragmentShader = shader.fragmentShader.replace(
+  //   '#define STANDARD',
+  //   `#define STANDARD
+  //         uniform sampler2D textures[3];
+  //         varying vec3 vTint;
+  //         varying float vtextures;`
+  // )
+  //   .replace(
+  //     '#include <fog_fragment>',
+  //     `#include <fog_fragment>
+  //     float x = vtextures;
+  //     vec4 col;
+  //     col = texture2D(textures[0], vUv ) * step(-0.1, x) * step(x, 0.1);
+  //     // col += texture2D(textures[1], vUv ) * step(0.9, x) * step(x, 1.1);
+  //     // col += texture2D(textures[2], vUv ) * step(1.9, x) * step(x, 2.1);
 
-    //   )
-    //   ;
-    //   console.log(shader.vertexShader);
+  //     gl_FragColor = col;
+  //     `
+
+  //   )
+  //   ;
+  //   console.log(shader.vertexShader);
   // }
 });
 
 let circleCount = 3;
 let instCount = ((circleCount * (circleCount + 1)) / 2) * 6 + 1;
-let o = new THREE.InstancedMesh(g, material, instCount);
 
+let o = new THREE.InstancedMesh(g, material[2], instCount);
 o.userData.phases = [];
 o.castShadow = true;
 o.receiveShadow = true;
 o.rotation.x = Math.PI * 0.5;
 o.updateMatrix();
+
+// console.log(o)
+
+let a = material.map((m, i) => {
+  let d = new THREE.InstancedMesh(g, material[i+1], instCount);
+  d.userData.phases = [];
+  d.castShadow = true;
+  d.receiveShadow = true;
+  d.rotation.x = Math.PI * 0.5;
+  d.updateMatrix();
+  return d;
+})
+
+let d = new THREE.InstancedMesh(g, material[0], instCount);
+d.userData.phases = [];
+d.castShadow = true;
+d.receiveShadow = true;
+d.rotation.x = Math.PI * 0.5;
+d.updateMatrix();
 
 let colors = [
   new THREE.Color(0xffffff),
@@ -221,7 +241,7 @@ let colors = [
   new THREE.Color(0x8888ff)
 ];
 let instColor = [];
-let textures = [];
+// let textures = [];
 
 let colorPhase = [];
 let dummy = new THREE.Object3D();
@@ -245,32 +265,33 @@ for (let seg = 0; seg < 6; seg++) {
         .addScaledVector(sideVector, sd)
         .applyAxisAngle(axis, (angle * seg) + (Math.PI / 6));
 
-      setHexData(o, dummy, vec3, counter);
-
-      console.log(o.material)
-      let r = THREE.MathUtils.randInt(0, 2)
-      console.log('random', r)
+      // let r = THREE.MathUtils.randInt(0, 2)
+      // console.log('random', r)
+      // o.material[2].opacity=0
       // o.material = material[r]
-      textures.push(r)
+      // textures.push(r)
+      // console.log(vec3)
+
+      setHexData(a[counter], dummy, vec3, counter);
 
       counter++;
     }
   }
 }
-setHexData(o, dummy, new THREE.Vector3(), counter); // central hex
+setHexData(d, dummy, new THREE.Vector3(), counter); // central hex
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 console.log('instColor', instColor)
-console.log('textures', textures)
+// console.log('textures', textures)
 
 g.setAttribute(
   "instColor",
   new THREE.InstancedBufferAttribute(new Float32Array(instColor), 3)
 );
-g.setAttribute(
-  "textureIndex",
-  new THREE.InstancedBufferAttribute(new Float32Array(textures), 2)
-);
+// g.setAttribute(
+//   "textureIndex",
+//   new THREE.InstancedBufferAttribute(new Float32Array(textures), 2)
+// );
 g.setAttribute(
   "colorPhase",
   new THREE.InstancedBufferAttribute(new Float32Array(colorPhase), 2)
@@ -278,6 +299,12 @@ g.setAttribute(
 //console.log(o);
 
 scene.add(o);
+scene.add(d);
+scene.add(a[0]);
+
+a.map((o) => {
+  scene.add(o);
+})
 
 // bloom /////////////////////////////////////////////////////////////////////////////////////////
 var renderScene = new RenderPass(scene, camera);
@@ -380,6 +407,7 @@ let mat4 = new THREE.Matrix4();
 renderer.setAnimationLoop(() => {
   let t = clock.getElapsedTime();
   hexUniforms.time.value = t;
+
   o.userData.phases.forEach((ph, idx) => {
     o.getMatrixAt(idx, mat4);
     mat4.decompose(dummy.position, dummy.quaternion, dummy.scale);
@@ -393,6 +421,20 @@ renderer.setAnimationLoop(() => {
     o.setMatrixAt(idx, dummy.matrix);
   });
   o.instanceMatrix.needsUpdate = true;
+
+  // d.userData.phases.forEach((ph, idx) => {
+  //   d.getMatrixAt(idx, mat4);
+  //   mat4.decompose(dummy.position, dummy.quaternion, dummy.scale);
+  //   dummy.position.z = Math.sin(ph.phaseDepth + t * 0.5) * 0.125;
+  //   dummy.rotation.set(
+  //     Math.cos(ph.phaseX + t * Math.sign(ph.phaseX)) * Math.PI * 0.0625,
+  //     Math.sin(ph.phaseY + t * Math.sign(ph.phaseY)) * Math.PI * 0.0625,
+  //     0
+  //   );
+  //   dummy.updateMatrix();
+  //   d.setMatrixAt(idx, dummy.matrix);
+  // });
+  // d.instanceMatrix.needsUpdate = true;
 
   hexUniforms.globalBloom.value = 1;
   renderer.setClearColor(0x000000);
