@@ -45,8 +45,12 @@ scene.add(new THREE.AmbientLight(0xffffff, 0.5));
 let g = new THREE.CylinderBufferGeometry(0.5, 0.5, 0.1, 6);
 g.rotateX(Math.PI * 0.5);
 var folder = '/projects/'
+var supGif = new SuperGif({ gif: document.getElementById('gif1') });
+supGif.load();
+var gifCanvas = supGif.get_canvas();
 var material = [
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'bankless-logo.png') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.Texture(gifCanvas) }),
+  // new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'bankless-logo.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BANKLESS-POAP.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BA.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAO Dash Logo.jpg') }),
@@ -111,7 +115,7 @@ material.forEach((m) => {
     // };
     shader.uniforms.time = hexUniforms.time;
     shader.uniforms.globalBloom = hexUniforms.globalBloom;
-    console.log(shader.vertexShader);
+    // console.log(shader.vertexShader);
     shader.vertexShader = `
     attribute vec3 instColor;
     attribute vec2 colorPhase;
@@ -128,7 +132,7 @@ material.forEach((m) => {
   `
     );
 
-    console.log(shader.fragmentShader);
+    // console.log(shader.fragmentShader);
     shader.fragmentShader = `
     uniform float time;
     uniform float globalBloom;
@@ -218,7 +222,7 @@ o.updateMatrix();
 // console.log(o)
 
 let a = material.map((m, i) => {
-  let d = new THREE.InstancedMesh(g, material[i+1], instCount);
+  let d = new THREE.InstancedMesh(g, material[i + 1], instCount);
   d.userData.phases = [];
   d.castShadow = true;
   d.receiveShadow = true;
@@ -442,7 +446,9 @@ renderer.setAnimationLoop(() => {
   hexUniforms.globalBloom.value = 0;
   // renderer.setClearColor(0x220011);
   finalComposer.render();
-
+  material[0].map.needsUpdate = true;
+  material[0].displacementScale = 200;
+  material[0].needsUpdate = true;
   //renderer.render(scene, camera);
 });
 
