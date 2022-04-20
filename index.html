@@ -278,7 +278,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
 
   <main class="max-h-screen overflow-y-scroll snap snap-y snap-mandatory text-white">
     <section id="section-1" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start">
-      <audio id="audio" autoplay>
+      <audio id="audio">
         <source src="assets/audio/FINAL_BDAO_CALL_69_V2.m4a" type="audio/mp4">
         <!-- <source src="assets/audio/BL_S03_Invite_Soundtrack.mp3" type="audio/mpeg"> -->
       </audio>
@@ -302,13 +302,25 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         </p>
       </div>
       <!-- Arrow down -->
-      <div class="absolute bottom-5 right-5" style="text-align: -webkit-right">
+      <div class="absolute bottom-5 right-5 cursor-pointer go-to-section-2" style="text-align: -webkit-right">
         <div class="animate-bounce w-6 h-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
           </svg>
         </div>
         scroll down
+      </div>
+      <!-- Audio -->
+      <div class="absolute top-5 right-5" style="text-align: -webkit-right">
+        <div class="w-6 h-6 cursor-pointer toggle-audio">
+          <svg class="audio-off hidden" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+          </svg>
+          <svg class="audio-on" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          </svg>
+        </div>
       </div>
     </section>
     <section id="section-2" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start overflow-hidden">
@@ -418,8 +430,17 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
           </div>
         </div>
       </div>
+      <!-- Arrow up -->
+      <div class="absolute top-5 right-5 cursor-pointer go-to-section-1" style="text-align: -webkit-right">
+        <div class="animate-bounce w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+          </svg>
+        </div>
+        scroll up
+      </div>
       <!-- Arrow down -->
-      <div class="absolute bottom-5 right-5" style="text-align: -webkit-right">
+      <div class="absolute bottom-5 right-5 cursor-pointer go-to-section-3" style="text-align: -webkit-right">
         <div class="animate-bounce w-6 h-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
@@ -429,6 +450,15 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       </div>
     </section>
     <section id="section-3" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start">
+      <!-- Arrow up -->
+      <div class="absolute top-5 right-5 cursor-pointer go-to-section-2" style="text-align: -webkit-right">
+        <div class="animate-bounce w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+          </svg>
+        </div>
+        scroll up
+      </div>
       <div class="absolute max-w-[92%] text-center p-10 bg-black/30 rounded-lg">
         <div class="text-4xl font-bold fit">Season&nbsp;4&nbsp;Launch</div>
         <div class="text-3xl mt-3">
@@ -469,11 +499,37 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-2012-2022.min.js" integrity="sha512-xFvEGAiMhvg1LBpa1KLutjlVHXSfe7Fq9dpAFqkRoSb31oZXIBTCxxhdmoXtJBbiQJk3RDu1GYfb8+OWqF9ehA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript">
-    // autoplay audio
+    // audio toggle
     $(function () {
-      $("body").click(function (event) {
-        document.getElementById('audio').play()
+      let isAudioPlayedOnce = false
+      let isAudioPlayed = false
+      $("#section-1").click(function (event) {
+        if (!isAudioPlayedOnce) {
+          toggleAudio()
+        }
       })
+      function toggleAudio() {
+        isAudioPlayedOnce = true
+        if (isAudioPlayed)
+          document.getElementById('audio').pause()
+        else
+          document.getElementById('audio').play()
+        isAudioPlayed = !isAudioPlayed
+        $('.audio-on, .audio-off').toggle()
+      }
+      $(".toggle-audio").click(function () {
+        toggleAudio()
+      })
+    })
+    // click to scroll
+    $(".go-to-section-1").click(function () {
+      document.getElementById('section-1').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+    })
+    $(".go-to-section-2").click(function () {
+      document.getElementById('section-2').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+    })
+    $(".go-to-section-3").click(function () {
+      document.getElementById('section-3').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
     })
     // resize text if window width < 1000px
     if (window.innerWidth < 1000)
