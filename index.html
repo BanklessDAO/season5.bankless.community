@@ -271,6 +271,15 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       width: 188px;
       height: 208px;
     }
+
+    /* Safari bug */
+    .is-ios-safari .bottom-10 {
+      bottom: 5.5rem;
+    }
+
+    .is-ios-safari .bottom-28 {
+      bottom: 10.5rem;
+    }
   </style>
 </head>
 
@@ -499,6 +508,13 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-2012-2022.min.js" integrity="sha512-xFvEGAiMhvg1LBpa1KLutjlVHXSfe7Fq9dpAFqkRoSb31oZXIBTCxxhdmoXtJBbiQJk3RDu1GYfb8+OWqF9ehA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript">
+    // detect iOS (also detecting Brave ...)
+    (function () {
+      const is_safari = !!navigator.userAgent.match(/Safari/)
+      if (is_safari) {
+        $('body').addClass('is-ios-safari')
+      }
+    })();
     // audio toggle
     $(function () {
       let isAudioPlayedOnce = false
