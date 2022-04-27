@@ -304,7 +304,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       </div>
       <!-- Season 4 Launch -->
       <div class="absolute bottom-28 left-8 bankless-red-left">
-        <p>Join us on Twitter spaces, <span class="date">May 2 2022</span>
+        <p>Join us on Twitter spaces, <span class="date">May 6 2022</span>
           <br />RSVP below 👇
           <br />The possibilities of a DAO are endless!
         </p>
@@ -467,7 +467,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <div class="text-lg">
-                <span class="date ml-1">May 2 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
+                <span class="date ml-1">May 6 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
               </div>
             </div>
           </a>
@@ -550,11 +550,11 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     if (window.innerWidth < 1000)
       textFit(document.getElementsByClassName('fit'))
     // dynamic launch time based on user timezone
-    const season2LaunchEventTimeInIST = moment.tz("2022-05-02 11:00", "America/New_York")
+    const season2LaunchEventTimeInIST = moment.tz("2022-05-06 11:00", "America/New_York")
     const userTimeZone = moment.tz.guess(true);
     const eventTimeMinutes = season2LaunchEventTimeInIST.tz(userTimeZone).format("mm")
     $('.date').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("MMMM D YYYY"))
-    eventTimeMinutes === "00" ? $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("HH A z")) : $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("HH:mm A z"))
+    eventTimeMinutes === "00" ? $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("hh A z")) : $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("hh:mm A z"))
   </script>
 </body>
 
