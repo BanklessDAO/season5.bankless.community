@@ -50,14 +50,15 @@ supGif.load();
 var gifCanvas = supGif.get_canvas();
 var material = [
   new THREE.MeshStandardMaterial({ map: new THREE.Texture(gifCanvas) }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Academy Logo.jpg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Academy_Banner_16x10.jpg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BAnkless_20Africa_20ContinentLARGE_20-_20Medium.jpg') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless Academy.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless Studios.png') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bankless WGMI Apparel.jpeg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BanklessDAO Merch2.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BanklessDAO Merch3.png') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'BanklessDAOPresents_Logo2.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Bounty Board.png') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Card_4.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Chippi_Default_copy_144.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAO Dash Logo.jpg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAO Dash.png') }),
@@ -66,12 +67,11 @@ var material = [
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAOTown.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'DAOVersity_POAP.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Dane-POAP-BanklessDAO-S3-CC45-03252022.apng.png') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Diamond Hands.jpeg') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Fight Club Glove.png') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Degen.jpg') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Fight Club.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Fight_20Club_20POAP_20-_20Small.jpg') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Flipper Zone.png') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Flipper Crop.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'GMI Index Chart.png') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'GMN A16Z.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'GPe_Yoga.jpg') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'Handshake.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'New_chippi_default_copy_1_2_copy_1_1_copy.jpeg') }),
@@ -79,7 +79,7 @@ var material = [
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'RCD NFT Drop.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'The Charts.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'The Rug Logo.jpg') }),
-  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'The Rug Vol 1.png') }),
+  new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'The Rug.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'USM_Galaxy_combined.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'bDAO Investment Report.png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'banklessLoanslogo.png') }),
@@ -87,14 +87,14 @@ var material = [
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'international_medianodes (1).png') }),
   new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load(folder + 'smartmockups_kyda4c39.jpg') }),
 ];
-var loader = new THREE.TextureLoader();
-var texture = loader.load('assets/images/BA.png');
-let m = new THREE.MeshStandardMaterial({
-  color: 0xFFFFFF,
-  map: texture,
-  roughness: 0.75,
-  metalness: 0.25
-});
+// var loader = new THREE.TextureLoader();
+// var texture = loader.load('assets/images/BA.png');
+// let m = new THREE.MeshStandardMaterial({
+//   color: 0xFFFFFF,
+//   map: texture,
+//   roughness: 0.75,
+//   metalness: 0.25
+// });
 let hexUniforms = {
   time: { value: 0 },
   globalBloom: { value: 0 }
