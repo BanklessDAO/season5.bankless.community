@@ -207,21 +207,23 @@ material.forEach((m) => {
   // }
 });
 
+let userData = [];
+
 let circleCount = 3;
 let instCount = ((circleCount * (circleCount + 1)) / 2) * 6 + 1;
 
-let o = new THREE.InstancedMesh(g, material[2], instCount);
-o.userData.phases = [];
-o.castShadow = true;
-o.receiveShadow = true;
-o.rotation.x = Math.PI * 0.5;
-o.updateMatrix();
+// let o = new THREE.InstancedMesh(g, material[2], instCount);
+// userData.phases = [];
+// o.castShadow = true;
+// o.receiveShadow = true;
+// o.rotation.x = Math.PI * 0.5;
+// o.updateMatrix();
 
 // console.log(o)
 
 let a = material.map((m, i) => {
   let d = new THREE.InstancedMesh(g, material[i + 1], instCount);
-  d.userData.phases = [];
+  // d.userData.phases = [];
   d.castShadow = true;
   d.receiveShadow = true;
   d.rotation.x = Math.PI * 0.5;
@@ -230,7 +232,7 @@ let a = material.map((m, i) => {
 })
 
 let d = new THREE.InstancedMesh(g, material[0], instCount);
-d.userData.phases = [];
+userData.phases = [];
 d.castShadow = true;
 d.receiveShadow = true;
 d.rotation.x = Math.PI * 0.5;
@@ -300,7 +302,7 @@ g.setAttribute(
 );
 //console.log(o);
 
-scene.add(o);
+// scene.add(o);
 scene.add(d);
 scene.add(a[0]);
 
@@ -410,8 +412,11 @@ renderer.setAnimationLoop(() => {
   let t = clock.getElapsedTime();
   hexUniforms.time.value = t;
 
-  o.userData.phases.forEach((ph, idx) => {
-    o.getMatrixAt(idx, mat4);
+  // console.log(o)
+  // console.log(userData)
+  userData.phases.forEach((ph, idx) => {
+    a[idx].getMatrixAt(idx, mat4);
+    console.log(mat4)
     mat4.decompose(dummy.position, dummy.quaternion, dummy.scale);
     dummy.position.z = Math.sin(ph.phaseDepth + t * 0.5) * 0.125;
     dummy.rotation.set(
@@ -420,9 +425,11 @@ renderer.setAnimationLoop(() => {
       0
     );
     dummy.updateMatrix();
-    o.setMatrixAt(idx, dummy.matrix);
+    a[idx].setMatrixAt(idx, dummy.matrix);
+    a[idx].instanceMatrix.needsUpdate = true;
   });
-  o.instanceMatrix.needsUpdate = true;
+  // d.instanceMatrix.needsUpdate = true;
+
 
   // d.userData.phases.forEach((ph, idx) => {
   //   d.getMatrixAt(idx, mat4);
@@ -461,7 +468,7 @@ function setHexData(o, dummy, pos, idx) {
 
   colorPhase.push(Math.random() * Math.PI * 2, Math.random() * 0.5 + 1); // phase, speed
 
-  o.userData.phases.push({
+  userData.phases.push({
     phaseX: (Math.random() - 0.5) * Math.PI * 2,
     phaseY: (Math.random() - 0.5) * Math.PI * 2,
     phaseDepth: Math.random() * Math.PI * 2
