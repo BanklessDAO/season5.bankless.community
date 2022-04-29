@@ -1,3 +1,5 @@
+// original version: https://codepen.io/prisoner849/pen/mdPqpOY
+
 console.clear();
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.120.0/build/three.module.js";
 import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.120.0/examples/jsm/controls/OrbitControls.js";
@@ -14,6 +16,10 @@ let camera = new THREE.PerspectiveCamera(
   100
 );
 camera.position.set(Math.PI / 2, 500, 0).setLength(6);
+// camera.position.set(Math.PI * 2, 3, 1.6).setLength(5);
+// camera.position.set(4, 4.5,  0.1).setLength(6);
+// 4.309914850600499, y: 3.3365110689215487, z: 0.12545348423834068
+// 3.3701920628381608, y: 2.7230830230744063, z: 1.3203088493860242
 let renderer = new THREE.WebGLRenderer({ antialias: false });
 renderer.setSize(innerWidth, innerHeight);
 renderer.shadowMap.enabled = true;
@@ -409,9 +415,26 @@ window.onresize = function () {
 let clock = new THREE.Clock();
 let mat4 = new THREE.Matrix4();
 
+// let x = 2
+// let y = 10
+// let z = 2
+
 renderer.setAnimationLoop(() => {
   let t = clock.getElapsedTime();
   hexUniforms.time.value = t;
+
+  // console.log(camera.position)
+  // camera.position.set(Math.PI / 2, 500, 0).setLength(6);
+  // camera.position.set(Math.PI * 2, 3, 4).setLength(5);
+  // if (y >= 4) {
+  //   console.log(x)
+  //   console.log(y)
+  //   console.log(z)
+  //   camera.position.set(x, y, z);
+  //   x+=0.1;
+  //   y-=0.1;
+  //   z+=0.1;
+  // }
 
   // console.log(o)
   // console.log(userData)
