@@ -363,6 +363,8 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     </section>
     <section id="section-2" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start overflow-hidden">
       <img id="gif1" style="display: none !important; " src="./projects/BANK.gif" />
+      <!-- Scrolling zone -->
+      <div class="block absolute top-0 right-0" style="width: 15vw; height: 100vh;"></div>
       <!-- Arrow up -->
       <div class="absolute top-8 right-8 cursor-pointer go-to-section-1 text-lg" style="text-align: -webkit-right">
         <div class="animate-bounce w-8 h-8">
@@ -401,6 +403,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         <div>
           <div class="flex justify-center text-2xl font-bold mt-8 text-center">
             <a class="rounded-full bankless-bg-red hover:bg-red-800 py-3 px-7 mr-4" target="_blank" href="https://season4.bankless.community/agenda">Agenda</a>
+            <!-- https://github.com/jekuer/add-to-calendar-button -->
             <div class="atcb" style="display:none;">
               {
               "name":"BanklessDAO Season 4 launch",
@@ -412,8 +415,8 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
               "location":"https://twitter.com/BanklessHQ",
               "label":"RSVP",
               "options":[
-              "Apple",
-              "Google",
+              "Apple|Calendar",
+              "Google|Google Cal",
               "Microsoft365",
               "MicrosoftTeams|Teams",
               "Outlook.com",
