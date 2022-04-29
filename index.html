@@ -42,6 +42,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
   <link rel="icon" type="image/png" sizes="33x33" href="favicon.png" />
   <link rel="apple-touch-icon" type="image/png" sizes="33x33" href="favicon.png" />
   <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1.8/assets/css/atcb.min.css">
   <style type="text/css">
     @font-face {
       font-family: "Clear Sans Bold";
@@ -52,7 +53,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       background-image: url(assets/videos/FINAL_BDAO_CALL_69_V2.webp);
     }
 
-    #section-3 {
+    #rsvp {
       background-image: url(assets/videos/FINAL_BDAO_CALL_69_V2.webp);
     }
 
@@ -77,7 +78,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         background-image: url(assets/videos/FINAL_BDAO_CALL_69_V2.gif);
       }
 
-      #section-3 {
+      #rsvp {
         background-image: url(assets/videos/FINAL_BDAO_CALL_69_V2.gif);
       }
 
@@ -138,9 +139,9 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     }
 
     @media (max-width: 1235px) {
-      #section-2 {
+      /* #section-2 {
         min-height: 1200px;
-      }
+      } */
 
       .guilds {
         transform: translate(100px, -380px);
@@ -168,9 +169,9 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     }
 
     @media (max-width: 800px) {
-      #section-2 {
+      /* #section-2 {
         min-height: auto;
-      }
+      } */
 
       .zoom {
         zoom: 0.45;
@@ -284,6 +285,31 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     .is-iphone .bottom-28 {
       bottom: 10.5rem;
     }
+
+    .jsgif {
+      display: none;
+    }
+
+    .atcb_button_wrapper {
+      padding: 0;
+    }
+
+    .atcb_button {
+      border-radius: 9999px;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      min-width: 163px;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   </style>
 </head>
 
@@ -336,112 +362,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       </div>
     </section>
     <section id="section-2" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start overflow-hidden">
-      <div class="zoom hidden">
-        <!-- Present projects -->
-        <!-- Projects part 1 -->
-        <div class="guilds">
-          <img id="gif1" style="display: none;" src="./projects/BANK.gif" />
-          <div class="absolute guild-title">
-            GUILDS
-          </div>
-          <div class="hex-row">
-            <div class="hex-hide">
-            </div>
-            <div class="hex even">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex-hide">
-            </div>
-          </div>
-          <div class="hex-row">
-            <div class="hex">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex even">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-          </div>
-          <div class="hex-row">
-            <div class="hex">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex even">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-          </div>
-        </div>
-        <!-- Projects part 2 -->
-        <div class="projects">
-          <div class="absolute red bankless-red project-title">
-            PROJECTS
-          </div>
-          <div class="hex-row">
-            <div class="hex-hide">
-            </div>
-            <div class="hex even">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex-hide">
-            </div>
-          </div>
-          <div class="hex-row">
-            <div class="hex">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex even">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-          </div>
-          <div class="hex-row">
-            <div class="hex">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex even">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-            <div class="hex">
-              <div class="left"></div>
-              <div class="middle"></div>
-              <div class="right"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <img id="gif1" style="display: none !important; " src="./projects/BANK.gif" />
       <!-- Arrow up -->
       <div class="absolute top-8 right-8 cursor-pointer go-to-section-1 text-lg" style="text-align: -webkit-right">
         <div class="animate-bounce w-8 h-8">
@@ -452,7 +373,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         scroll up
       </div>
       <!-- Arrow down -->
-      <div class="absolute bottom-8 right-8 cursor-pointer go-to-section-3 text-lg" style="text-align: -webkit-right">
+      <div class="absolute bottom-8 right-8 cursor-pointer go-to-rsvp text-lg" style="text-align: -webkit-right">
         <div class="animate-bounce w-8 h-8">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
@@ -461,35 +382,55 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         scroll down
       </div>
     </section>
-    <section id="section-3" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start">
+    <section id="rsvp" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start">
       <div class="absolute max-w-[92%] text-center p-10 bg-black/30 rounded-lg">
         <div class="text-4xl font-bold fit">Season&nbsp;4&nbsp;Launch</div>
         <div class="text-3xl mt-3">
-          <a title="Add to Calendar" target="_blank" href="https://season4.bankless.community/rsvp">
-            <div class="flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <div class="text-lg">
-                <span class="date ml-1">May 6 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
-              </div>
+          <div class="flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <div class="text-lg">
+              <span class="date ml-1">May 6 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
             </div>
-          </a>
+          </div>
         </div>
         <div class="text-xl mt-4 mb-8">In <a class="twitter" target="_blank" href="https://twitter.com/BanklessHQ">Twitter
             Spaces</a>
         </div>
         <div>
-          <div class="text-8xl font-bold fit bankless-font">BANKLESS</div>
-          <div class="flex justify-center text-7xl font-bold mt-8 text-center bankless-font">
-            <span class="bankless-red-underline">DAO</span>
-            <span class="bankless-red">+</span>
-            <span class="bankless-red-underline">HQ</span>
-          </div>
-          <div class="flex justify-center text-2xl font-bold mt-16 text-center">
+          <div class="flex justify-center text-2xl font-bold mt-8 text-center">
             <a class="rounded-full bankless-bg-red hover:bg-red-800 py-3 px-7 mr-4" target="_blank" href="https://season4.bankless.community/agenda">Agenda</a>
-            <a class="rounded-full bankless-bg-red hover:bg-red-800 py-3 px-7" target="_blank" href="https://season4.bankless.community/rsvp">RSVP</a>
+            <div class="atcb" style="display:none;">
+              {
+              "name":"BanklessDAO Season 4 launch",
+              "description":"This calendar invites blocks of time on your calendar to attend BanklessDAO's Season 4 Launch Event.<br>We will not collect your email or send you emails.<br><br>On May 6th, head over to BanklessHQ's twitter [url]https://twitter.com/BanklessHQ[/url] and join the Twitter Space event.<br>Follow along with the agenda here [url]https://season4.bankless.community/agenda[/url]<br><br>See you there, we're excited to have you!<br><br>Here's how to use Twitter Spaces [url]https://media.twitter.com/en/articles/how-to/2021/how-to-use-twitter-spaces[/url]<br>",
+              "startDate":"2022-05-06",
+              "startTime":"11:00",
+              "endDate":"2022-05-06",
+              "endTime":"12:15",
+              "location":"https://twitter.com/BanklessHQ",
+              "label":"RSVP",
+              "options":[
+              "Apple",
+              "Google",
+              "Microsoft365",
+              "MicrosoftTeams|Teams",
+              "Outlook.com",
+              "Yahoo"
+              ],
+              "timeZone":"America/New_York",
+              "inline":true,
+              "trigger":"click"
+              }
+            </div>
           </div>
+        </div>
+        <div class="text-8xl font-bold fit bankless-font mt-8">BANKLESS</div>
+        <div class="flex justify-center text-7xl font-bold mt-8 text-center bankless-font">
+          <span class="bankless-red-underline">DAO</span>
+          <span class="bankless-red">+</span>
+          <span class="bankless-red-underline">HQ</span>
         </div>
       </div>
       <!-- Arrow up -->
@@ -511,6 +452,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-2012-2022.min.js" integrity="sha512-xFvEGAiMhvg1LBpa1KLutjlVHXSfe7Fq9dpAFqkRoSb31oZXIBTCxxhdmoXtJBbiQJk3RDu1GYfb8+OWqF9ehA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1.8" defer></script>
   <script type="text/javascript">
     // detect iPhone (also detecting Brave ...)
     (function () {
@@ -547,8 +489,8 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     $(".go-to-section-2").click(function () {
       document.getElementById('section-2').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
     })
-    $(".go-to-section-3").click(function () {
-      document.getElementById('section-3').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+    $(".go-to-rsvp").click(function () {
+      document.getElementById('rsvp').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
     })
     // resize text if window width < 1000px
     if (window.innerWidth < 1000)

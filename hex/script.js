@@ -21,7 +21,8 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 //renderer.setClearColor(0x224488);
 renderer.outputEncoding = THREE.sRGBEncoding;
 // document.body.appendChild(renderer.domElement);
-document.getElementById("section-2").appendChild(renderer.domElement);
+var section = document.getElementById("section-2");
+section.insertBefore(renderer.domElement, section.childNodes[0]);
 
 let controls = new OrbitControls(camera, renderer.domElement);
 
@@ -285,7 +286,7 @@ for (let seg = 0; seg < 6; seg++) {
 setHexData(d, dummy, new THREE.Vector3(), counter); // central hex
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-console.log('instColor', instColor)
+// console.log('instColor', instColor)
 // console.log('textures', textures)
 
 g.setAttribute(
@@ -416,7 +417,7 @@ renderer.setAnimationLoop(() => {
   // console.log(userData)
   userData.phases.forEach((ph, idx) => {
     a[idx].getMatrixAt(idx, mat4);
-    console.log(mat4)
+    // console.log(mat4)
     mat4.decompose(dummy.position, dummy.quaternion, dummy.scale);
     dummy.position.z = Math.sin(ph.phaseDepth + t * 0.5) * 0.125;
     dummy.rotation.set(
