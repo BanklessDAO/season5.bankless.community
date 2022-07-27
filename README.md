@@ -1,3 +1,3 @@
-# season4.bankless.community
+# season5.bankless.community
 
-BanklessDAO 🏴 Season 4 launch 🚀
+BanklessDAO 🏴 Season 5 launch 🚀
