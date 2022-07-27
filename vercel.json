@@ -2,12 +2,12 @@
   "redirects": [
     {
       "source": "/rsvp",
-      "destination": "https://season4.bankless.community/#rsvp",
+      "destination": "https://season5.bankless.community/#rsvp",
       "permanent": false
     },
     {
       "source": "/agenda",
-      "destination": "https://bankless.notion.site/Season-4-Launch-May-6th-2022-11am-12-15pm-EST-f30b3c02a8844f1d96b501e51a6d944b",
+      "destination": "https://www.notion.so/bankless/Season-5-Launch-Scaling-Influence-August-12th-2022-11am-12-15pm-EST-cfb13d0d826847d9930dbcc931b665c8",
       "permanent": false
     }
   ]
