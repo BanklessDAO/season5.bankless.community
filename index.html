@@ -103,8 +103,8 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       }
 
       .top-6.lesson-launch {
-        top: 9rem !important;
-        right: 1rem;
+        top: 7rem !important;
+        right: 0rem;
       }
 
       video {
@@ -152,6 +152,26 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       #carouselDarkVariant {
         padding: 80px 50px;
       }
+
+      .limit-mobile {
+        font-size: 20px;
+      }
+
+      #rsvp .limit-mobile {
+        font-size: 16px;
+      }
+
+      .p-10 {
+        padding: 1rem !important;
+      }
+
+      .mt-8 {
+        margin-top: 1rem !important;
+      }
+
+      .hide-mobile {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -162,15 +182,17 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     <section id="section-1" class="flex relative items-center justify-center bg-black w-screen h-screen bg-left bg-cover snap-start">
       <!-- Intro -->
       <div class="text-2xl absolute top-6 left-6 flex flex-col items-center justify-center">
-        <img class="" src="assets/images/bankless-logo.png" width="100px" height="100%" />
+        <img src="assets/images/bankless-logo.png" width="100px" height="100%" />
         <span>#ScalingInfluence</span>
       </div>
       <!-- Season 5 Launch -->
       <img class="" src="assets/images/Seeason_5_launch.png" />
-      <div class="text-2xl absolute bottom-28 bg-red-600 p-4 rounded-lg">
+      <div class="text-2xl absolute bottom-28 bg-red-600 p-4 rounded-xl">
         <a class="flex" target="_blank" href="https://season5.bankless.community/space">
-          <img class="mr-2" src="assets/images/twitter_space.png" width="30px" height="100%" />
-          <span class="date">August 12 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
+          <img class="mr-2" src="assets/images/twitter_space.png" width="30px" height="30px !important" />
+          <div class="limit-mobile">
+            <span class="date">August 12 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
+          </div>
         </a>
       </div>
       <!-- Arrow down -->
@@ -249,28 +271,23 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     </section>
     <section id="rsvp" class="flex relative items-center justify-center w-screen h-screen bg-left bg-cover snap-start">
       <div class="text-2xl absolute top-6 left-6 flex flex-col items-center justify-center">
-        <img class="" src="assets/images/bankless-logo.png" width="100px" height="100%" />
-        <span>#ScalingInfluence</span>
+        <img src="assets/images/bankless-logo.png" width="100px" height="100%" />
+        <span class="hide-mobile">#ScalingInfluence</span>
       </div>
-      <div class="absolute max-w-[92%] text-center p-10 bg-black/30 rounded-lg">
-        <div class="text-4xl font-bold fit">Season&nbsp;5&nbsp;Launch</div>
-        <div class="text-3xl mt-3">
-          <div class="flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <div class="text-lg">
-              <span class="date ml-1">August 12 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
+      <div class="absolute max-w-[92%] text-center p-10 bg-black/30 rounded-xl">
+        <div class="text-4xl font-bold fit mb-4">Season&nbsp;5&nbsp;Launch</div>
+        <div class="text-xl bottom-28 bg-red-600 rounded-xl max-w-fit m-auto">
+          <a class="flex p-4" target="_blank" href="https://season5.bankless.community/space">
+            <img class="mr-2" src="assets/images/twitter_space.png" width="30px" height="30px !important" />
+            <div class="limit-mobile">
+              <span class="date">August 12 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
             </div>
-          </div>
-        </div>
-        <div class="text-xl mt-4 mb-8">In <a class="twitter" target="_blank" href="https://season5.bankless.community/space">Twitter
-            Spaces</a>
+          </a>
         </div>
         <div>
           <div class="flex justify-center text-2xl font-bold mt-8 text-center">
-            <a class="rounded-full bankless-bg-red hover:bg-red-800 py-3 px-7 mr-4" target="_blank" href="https://season5.bankless.community/agenda">Agenda</a>
-            <a class="rounded-full bg-white hover:bg-slate-200 py-3 px-7 mr-4 text-gray-700 flex items-center justify-center" target="_blank" href="https://season5.bankless.community/space"><img class="mr-2" src="assets/images/twitter_space_grey.png" width="20px" height="100%" /> RSVP</a>
+            <a class="rounded-xl bankless-bg-red hover:bg-red-800 py-3 px-7 mr-4" target="_blank" href="https://season5.bankless.community/agenda">Agenda</a>
+            <a class="rounded-xl bg-white hover:bg-slate-200 py-3 px-7 text-gray-700 flex items-center justify-center" target="_blank" href="https://season5.bankless.community/space"><img class="mr-2" src="assets/images/twitter_space_grey.png" width="20px" height="100%" /> RSVP</a>
           </div>
         </div>
         <div class="text-8xl font-bold fit bankless-font mt-8">BANKLESS</div>
