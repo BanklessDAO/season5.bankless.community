@@ -28,7 +28,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
   <meta property="og:url" content="https://season5.bankless.community/" />
   <meta property="og:title" content="Season 5 | BanklessDAO" />
   <meta property="og:description" content="You are invite for BanklessDAO 🏴 Season 5 launch 🚀" />
-  <meta property="og:image" content="https://season5.bankless.community/assets/images/Season5-invitation.jpg?v2" />
+  <meta property="og:image" content="https://season5.bankless.community/assets/images/Season5-invitation.jpg?v3" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="628" />
   <!-- Twitter -->
@@ -36,13 +36,13 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Season 5 | BanklessDAO" />
   <meta name="twitter:description" content="You are invite for BanklessDAO 🏴 Season 5 launch 🚀" />
-  <meta name="twitter:image" content="https://season5.bankless.community/assets/images/Season5-invitation.jpg?v2" />
+  <meta name="twitter:image" content="https://season5.bankless.community/assets/images/Season5-invitation.jpg?v3" />
   <!-- favicons -->
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="33x33" href="favicon.png" />
   <link rel="apple-touch-icon" type="image/png" sizes="33x33" href="favicon.png" />
   <!-- style -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1.8/assets/css/atcb.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
   <style type="text/css">
     @font-face {
       font-family: "Clear Sans Bold";
@@ -50,11 +50,28 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     }
 
     #section-1 {
-      background-image: url(assets/videos/FINAL_BDAO_CALL_69_V2.webp);
+      background-image: url(assets/images/bg_only.png);
+    }
+
+    #section-2 {
+      background-image: url(assets/images/bg_only.png);
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      filter: none !important;
+      width: 4rem;
+      height: 4rem;
     }
 
     #rsvp {
-      background-image: url(assets/videos/FINAL_BDAO_CALL_69_V2.webp);
+      background-image: url(assets/images/bg_only.png);
+    }
+
+    .lesson-launch {
+      width: 280px;
+      max-width: 50%;
+      right: 6.5rem;
     }
 
     iframe,
@@ -72,14 +89,22 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       display: none !important;
     }
 
+    #carouselDarkVariant {
+      padding: 80px 200px;
+      max-width: 1400px;
+    }
+
     /* mobile + tablet optimization */
+
     @media (max-width: 1024px) {
-      #section-1 {
-        background-image: url(assets/videos/FINAL_BDAO_CALL_69_V2.gif);
+
+      #carouselDarkVariant {
+        padding: 80px 100px;
       }
 
-      #rsvp {
-        background-image: url(assets/videos/FINAL_BDAO_CALL_69_V2.gif);
+      .top-6.lesson-launch {
+        top: 9rem !important;
+        right: 1rem;
       }
 
       video {
@@ -113,170 +138,6 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       font-family: "Clear Sans Bold";
     }
 
-    /* Hexagone style from https://jtauber.github.io/articles/css-hexagon.html */
-    .guilds {
-      float: left;
-      width: 616px;
-      transform: translate(0, -104px);
-    }
-
-    .projects {
-      float: left;
-      width: 616px;
-      transform: translate(-53px, 2px);
-    }
-
-    .guild-title {
-      font-size: 6rem;
-      line-height: 6rem;
-    }
-
-    .project-title {
-      font-size: 6rem;
-      line-height: 6rem;
-      top: 0;
-      right: 0;
-    }
-
-    @media (max-width: 1235px) {
-      /* #section-2 {
-        min-height: 1200px;
-      } */
-
-      .guilds {
-        transform: translate(100px, -380px);
-      }
-
-      .projects {
-        transform: translate(-86px, 156px);
-        position: absolute;
-      }
-
-      .guild-title {
-        top: 120px;
-        left: -50px;
-        font-size: 4rem;
-        line-height: 4rem;
-      }
-
-      .project-title {
-        top: unset;
-        right: -132px;
-        bottom: -78px;
-        font-size: 4rem;
-        line-height: 4rem;
-      }
-    }
-
-    @media (max-width: 800px) {
-      /* #section-2 {
-        min-height: auto;
-      } */
-
-      .zoom {
-        zoom: 0.45;
-      }
-
-      .guild-title {
-        top: 78px;
-        left: -170px;
-        font-size: 3rem;
-        line-height: 3rem;
-      }
-
-      .project-title {
-        top: unset;
-        right: unset;
-        left: 26px;
-        bottom: -216px;
-        font-size: 3rem;
-        line-height: 3rem;
-      }
-    }
-
-    .guilds .hex .middle {
-      background: white;
-    }
-
-    .guilds .hex .left {
-      border-right: 60px solid white;
-    }
-
-    .guilds .hex .right {
-      border-left: 60px solid white;
-    }
-
-    .projects .hex .middle {
-      background: #D02128;
-    }
-
-    .projects .hex .left {
-      border-right: 60px solid #D02128;
-    }
-
-    .projects .hex .right {
-      border-left: 60px solid #D02128;
-    }
-
-    .hex {
-      float: left;
-      margin-right: -52px;
-      margin-bottom: -100px;
-    }
-
-    .hex .left {
-      float: left;
-      width: 0;
-      border-top: 104px solid transparent;
-      border-bottom: 104px solid transparent;
-    }
-
-    .hex .middle {
-      float: left;
-      width: 120px;
-      height: 208px;
-    }
-
-    .hex::after {
-      content: "";
-      width: 200px;
-      height: 200px;
-      display: block;
-      position: absolute;
-      background-size: contain;
-      background-repeat: no-repeat;
-      transform: translate(20px, 4px);
-    }
-
-    .guilds .hex::after {
-      background-image: url(https://gobankless.ghost.io/content/images/2021/10/Education-Guild-Bankless-DAO-.png);
-    }
-
-    .projects .hex::after {
-      background-image: url(assets/images/BA.png);
-    }
-
-    .hex .right {
-      float: left;
-      width: 0;
-      border-top: 104px solid transparent;
-      border-bottom: 104px solid transparent;
-    }
-
-    .hex-row {
-      clear: left;
-    }
-
-    .hex.even {
-      margin-top: 106px;
-    }
-
-    .hex-hide {
-      float: left;
-      width: 188px;
-      height: 208px;
-    }
-
     /* iPhone bug */
     .is-iphone .bottom-8 {
       bottom: 5.5rem;
@@ -286,30 +147,11 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       bottom: 10.5rem;
     }
 
-    .jsgif {
-      display: none;
-    }
+    @media (max-width: 500px) {
 
-    .atcb_button_wrapper {
-      padding: 0;
-    }
-
-    .atcb_button {
-      border-radius: 9999px;
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      min-width: 163px;
-      background-color: white !important;
-    }
-
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
+      #carouselDarkVariant {
+        padding: 80px 50px;
+      }
     }
   </style>
 </head>
@@ -317,28 +159,19 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
 <body>
 
   <main class="max-h-screen overflow-y-scroll snap snap-y snap-mandatory text-white">
-    <section id="section-1" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start">
-      <audio id="audio">
-        <source src="assets/audio/FINAL_BDAO_CALL_69_V2.m4a" type="audio/mp4">
-        <!-- <source src="assets/audio/BL_S03_Invite_Soundtrack.mp3" type="audio/mpeg"> -->
-      </audio>
+    <section id="section-1" class="flex relative items-center justify-center bg-black w-screen h-screen bg-left bg-cover snap-start">
       <!-- Intro -->
-      <div class="absolute max-w-[100%] bankless-font pb-28">
-        <div class="text-8xl font-bold max-w-[90%] fit">
-          BANKLESS&nbsp;<span class="bankless-red-underline">DAO</span>
-        </div>
-        <div class="grid grid-rows-2 grid-flow-col items-center gap-4 float-right w-fit mt-20 text-4xl font-bold">
-          <div class="col-span-1">Season</div>
-          <div class="row-span-1 col-span-1">Launch</div>
-          <div class="row-span-2 text-9xl bankless-red">5</div>
-        </div>
+      <div class="text-2xl absolute top-6 left-6 flex flex-col items-center justify-center">
+        <img class="" src="assets/images/bankless-logo.png" width="100px" height="100%" />
+        <span>#ScalingInfluence</span>
       </div>
       <!-- Season 5 Launch -->
-      <div class="absolute bottom-28 left-8 bankless-red-left">
-        <p>Join us on Twitter spaces, <span class="date">May 6 2022</span>
-          <br />RSVP below 👇
-          <br />The possibilities of a DAO are endless!
-        </p>
+      <img class="" src="assets/images/Seeason_5_launch.png" />
+      <div class="text-2xl absolute bottom-28 bg-red-600 p-4 rounded-lg">
+        <a class="flex" target="_blank" href="https://season5.bankless.community/space">
+          <img class="mr-2" src="assets/images/twitter_space.png" width="30px" height="100%" />
+          <span class="date">August 12 2022</span>,&nbsp;at&nbsp;<span class="time">11 AM EST</span>
+        </a>
       </div>
       <!-- Arrow down -->
       <div class="absolute bottom-8 right-8 cursor-pointer go-to-section-2 text-lg" style="text-align: -webkit-right">
@@ -349,23 +182,52 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         </div>
         scroll down
       </div>
-      <!-- Audio -->
-      <div class="absolute top-8 right-8" style="text-align: -webkit-right">
-        <div class="w-8 h-8 cursor-pointer toggle-audio">
-          <svg class="audio-off hidden" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-          </svg>
-          <svg class="audio-on" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-          </svg>
-        </div>
-      </div>
     </section>
-    <section id="section-2" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start overflow-hidden">
-      <img id="gif1" style="display: none !important; " src="./projects/BANK.gif" />
+    <section id="section-2" class="flex relative items-center justify-center bg-black w-screen h-screen bg-left bg-cover snap-start overflow-hidden">
+      <div class="text-2xl absolute top-6 left-6 flex flex-col items-center justify-center">
+        <img class="" src="assets/images/bankless-logo.png" width="100px" height="100%" />
+        <span>#ScalingInfluence</span>
+      </div>
+      <div id="carouselDarkVariant" class="carousel slide carousel relative" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-12">
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="1" aria-label="Slide 1"></button>
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="2" aria-label="Slide 1"></button>
+        </div>
+
+        <!-- Inner -->
+        <div class="carousel-inner relative w-full overflow-hidden">
+          <!-- Single item -->
+          <div class="carousel-item active relative float-left w-full">
+            <img src="assets/images/s1.png" class="block w-full" />
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item relative float-left w-full">
+            <img src="assets/images/s2.png" class="block w-full" />
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item relative float-left w-full">
+            <img src="assets/images/s3.png" class="block w-full" />
+          </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <button class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline -left-4 ml-2" type="button" data-bs-target="#carouselDarkVariant" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline -right-4 mr-2" type="button" data-bs-target="#carouselDarkVariant" data-bs-slide="next">
+          <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <img class="absolute top-6 lesson-launch" src="assets/images/Seeason_5_launch.png" />
       <!-- Scrolling zone -->
-      <div class="block absolute top-0 right-0" style="width: 15vw; height: 100vh;"></div>
+      <!-- <div class="block absolute top-0 right-0" style="width: 15vw; height: 100vh;"></div> -->
       <!-- Arrow up -->
       <div class="absolute top-8 right-8 cursor-pointer go-to-section-1 text-lg" style="text-align: -webkit-right">
         <div class="animate-bounce w-8 h-8">
@@ -385,7 +247,11 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         scroll down
       </div>
     </section>
-    <section id="rsvp" class="flex relative items-center justify-center bg-black w-screen h-screen bg-center bg-cover snap-start">
+    <section id="rsvp" class="flex relative items-center justify-center w-screen h-screen bg-left bg-cover snap-start">
+      <div class="text-2xl absolute top-6 left-6 flex flex-col items-center justify-center">
+        <img class="" src="assets/images/bankless-logo.png" width="100px" height="100%" />
+        <span>#ScalingInfluence</span>
+      </div>
       <div class="absolute max-w-[92%] text-center p-10 bg-black/30 rounded-lg">
         <div class="text-4xl font-bold fit">Season&nbsp;5&nbsp;Launch</div>
         <div class="text-3xl mt-3">
@@ -398,36 +264,13 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
             </div>
           </div>
         </div>
-        <div class="text-xl mt-4 mb-8">In <a class="twitter" target="_blank" href="https://twitter.com/banklessdao">Twitter
+        <div class="text-xl mt-4 mb-8">In <a class="twitter" target="_blank" href="https://season5.bankless.community/space">Twitter
             Spaces</a>
         </div>
         <div>
           <div class="flex justify-center text-2xl font-bold mt-8 text-center">
             <a class="rounded-full bankless-bg-red hover:bg-red-800 py-3 px-7 mr-4" target="_blank" href="https://season5.bankless.community/agenda">Agenda</a>
-            <!-- https://github.com/jekuer/add-to-calendar-button -->
-            <div class="atcb" style="display:none;">
-              {
-              "name":"BanklessDAO Season 5 launch",
-              "description":"This calendar invites blocks of time on your calendar to attend BanklessDAO's Season 5 Launch Event.<br>We will not collect your email or send you emails.<br><br>On August 12th, head over to BanklessDAO's twitter [url]https://twitter.com/banklessdao[/url] and join the Twitter Space event.<br>Follow along with the agenda here [url]https://season5.bankless.community/agenda[/url]<br><br>See you there, we're excited to have you!<br><br>Here's how to use Twitter Spaces [url]https://media.twitter.com/en/articles/how-to/2021/how-to-use-twitter-spaces[/url]<br>",
-              "startDate":"2022-08-12",
-              "startTime":"11:00",
-              "endDate":"2022-08-12",
-              "endTime":"12:15",
-              "location":"https://twitter.com/banklessdao",
-              "label":"RSVP",
-              "options":[
-              "Apple|Calendar",
-              "Google|Google Cal",
-              "Microsoft365",
-              "MicrosoftTeams|Teams",
-              "Outlook.com",
-              "Yahoo"
-              ],
-              "timeZone":"America/New_York",
-              "inline":true,
-              "trigger":"click"
-              }
-            </div>
+            <a class="rounded-full bg-white hover:bg-slate-200 py-3 px-7 mr-4 text-gray-700 flex items-center justify-center" target="_blank" href="https://season5.bankless.community/space"><img class="mr-2" src="assets/images/twitter_space_grey.png" width="20px" height="100%" /> RSVP</a>
           </div>
         </div>
         <div class="text-8xl font-bold fit bankless-font mt-8">BANKLESS</div>
@@ -437,6 +280,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
           <span class="bankless-red-underline">HQ</span>
         </div>
       </div>
+      <img class="absolute bottom-6 lesson-launch right-2" src="assets/images/Seeason_5_launch.png" />
       <!-- Arrow up -->
       <div class="absolute top-8 right-8 cursor-pointer go-to-section-2 text-lg" style="text-align: -webkit-right">
         <div class="animate-bounce w-8 h-8">
@@ -449,14 +293,12 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     </section>
   </main>
   <!-- javascript -->
-  <script src="https://meetar.github.io/threejs-shader-demos/libgif.js"></script>
-  <script type="module" src="./hex/script.js"></script>
   <script async defer data-website-id="de8f1109-efe1-4db0-816a-dc97ddb11412" src="https://stats.banklessacademy.com/stats.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js" integrity="sha512-vLs5rAqfvmv/IpN7JustROkGAvjK/L+vgVDFe7KpdtLztqF8mZDfleK2MZj/xuOrWjma0pW+lPCMcBbPKJVC7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-2012-2022.min.js" integrity="sha512-xFvEGAiMhvg1LBpa1KLutjlVHXSfe7Fq9dpAFqkRoSb31oZXIBTCxxhdmoXtJBbiQJk3RDu1GYfb8+OWqF9ehA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1.8" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   <script type="text/javascript">
     // detect iPhone (also detecting Brave ...)
     (function () {
@@ -464,28 +306,6 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         $('body').addClass('is-iphone')
       }
     })();
-    // audio toggle
-    $(function () {
-      let isAudioPlayedOnce = false
-      let isAudioPlayed = false
-      $("#section-1").click(function (event) {
-        if (!isAudioPlayedOnce && !event.target.className.includes('go-to-section-2')) {
-          toggleAudio()
-        }
-      })
-      function toggleAudio() {
-        isAudioPlayedOnce = true
-        if (isAudioPlayed)
-          document.getElementById('audio').pause()
-        else
-          document.getElementById('audio').play()
-        isAudioPlayed = !isAudioPlayed
-        $('.audio-on, .audio-off').toggle()
-      }
-      $(".toggle-audio").click(function () {
-        toggleAudio()
-      })
-    })
     // click to scroll
     $(".go-to-section-1").click(function () {
       document.getElementById('section-1').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })

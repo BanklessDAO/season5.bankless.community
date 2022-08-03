@@ -6,6 +6,11 @@
       "permanent": false
     },
     {
+      "source": "/space",
+      "destination": "https://twitter.com/banklessdao",
+      "permanent": false
+    },
+    {
       "source": "/agenda",
       "destination": "https://bankless.notion.site/Season-5-Launch-Scaling-Influence-August-12th-2022-11am-12-15pm-EST-cfb13d0d826847d9930dbcc931b665c8",
       "permanent": false
