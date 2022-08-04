@@ -49,6 +49,11 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       src: url(assets/fonts/ClearSans-Bold.woff);
     }
 
+    @font-face {
+      font-family: "BioRhyme ExtraBold";
+      src: url(assets/fonts/BioRhyme-ExtraBold.ttf);
+    }
+
     #section-1 {
       background-image: url(assets/images/bg_only.png);
     }
@@ -102,9 +107,9 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         padding: 80px 100px;
       }
 
-      .top-6.lesson-launch {
-        top: 7rem !important;
-        right: 0rem;
+      .bottom-6.lesson-launch {
+        bottom: 5rem !important;
+        right: 1rem;
       }
 
       video {
@@ -136,6 +141,10 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
 
     .bankless-font {
       font-family: "Clear Sans Bold";
+    }
+
+    .special-font {
+      font-family: "BioRhyme ExtraBold";
     }
 
     /* iPhone bug */
@@ -183,10 +192,10 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
       <!-- Intro -->
       <div class="text-2xl absolute top-6 left-6 flex flex-col items-center justify-center">
         <img src="assets/images/bankless-logo.png" width="100px" height="100%" />
-        <span>#ScalingInfluence</span>
+        <span class="special-font">#ScalingInfluence</span>
       </div>
       <!-- Season 5 Launch -->
-      <img class="" src="assets/images/Seeason_5_launch.png" />
+      <img class="-mt-16" src="assets/images/Seeason_5_launch.png" />
       <div class="text-2xl absolute bottom-28 bg-red-600 p-4 rounded-xl">
         <a class="flex" target="_blank" href="https://season5.bankless.community/space">
           <img class="mr-2" src="assets/images/twitter_space.png" width="30px" height="30px !important" />
@@ -208,31 +217,55 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     <section id="section-2" class="flex relative items-center justify-center bg-black w-screen h-screen bg-left bg-cover snap-start overflow-hidden">
       <div class="text-2xl absolute top-6 left-6 flex flex-col items-center justify-center">
         <img class="" src="assets/images/bankless-logo.png" width="100px" height="100%" />
-        <span>#ScalingInfluence</span>
+        <span class="special-font">#ScalingInfluence</span>
       </div>
       <div id="carouselDarkVariant" class="carousel slide carousel relative" data-bs-ride="carousel">
         <!-- Indicators -->
         <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-12">
           <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="1" aria-label="Slide 1"></button>
-          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="2" aria-label="Slide 1"></button>
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="6" aria-label="Slide 7"></button>
         </div>
 
         <!-- Inner -->
         <div class="carousel-inner relative w-full overflow-hidden">
           <!-- Single item -->
           <div class="carousel-item active relative float-left w-full">
-            <img src="assets/images/s1.png" class="block w-full" />
+            <img src="assets/images/slide-1.png" class="block w-full" />
           </div>
 
           <!-- Single item -->
           <div class="carousel-item relative float-left w-full">
-            <img src="assets/images/s2.png" class="block w-full" />
+            <img src="assets/images/slide-2.png" class="block w-full" />
           </div>
 
           <!-- Single item -->
           <div class="carousel-item relative float-left w-full">
-            <img src="assets/images/s3.png" class="block w-full" />
+            <img src="assets/images/slide-3.png" class="block w-full" />
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item relative float-left w-full">
+            <img src="assets/images/slide-4.png" class="block w-full" />
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item relative float-left w-full">
+            <img src="assets/images/slide-5.png" class="block w-full" />
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item relative float-left w-full">
+            <img src="assets/images/slide-6.png" class="block w-full" />
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item relative float-left w-full">
+            <img src="assets/images/slide-7.png" class="block w-full" />
           </div>
         </div>
         <!-- Inner -->
@@ -247,7 +280,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <img class="absolute top-6 lesson-launch" src="assets/images/Seeason_5_launch.png" />
+      <img class="absolute bottom-6 lesson-launch" src="assets/images/Seeason_5_launch.png" />
       <!-- Scrolling zone -->
       <!-- <div class="block absolute top-0 right-0" style="width: 15vw; height: 100vh;"></div> -->
       <!-- Arrow up -->
@@ -271,8 +304,8 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
     </section>
     <section id="rsvp" class="flex relative items-center justify-center w-screen h-screen bg-left bg-cover snap-start">
       <div class="text-2xl absolute top-6 left-6 flex flex-col items-center justify-center">
-        <img src="assets/images/bankless-logo.png" width="100px" height="100%" />
-        <span class="hide-mobile">#ScalingInfluence</span>
+        <img class="hide-mobile" src="assets/images/bankless-logo.png" width="100px" height="100%" />
+        <span  class="special-font hide-mobile">#ScalingInfluence</span>
       </div>
       <div class="absolute max-w-[92%] text-center p-10 bg-black/30 rounded-xl">
         <div class="text-4xl font-bold fit mb-4">Season&nbsp;5&nbsp;Launch</div>
@@ -287,7 +320,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
         <div>
           <div class="flex justify-center text-2xl font-bold mt-8 text-center">
             <a class="rounded-xl bankless-bg-red hover:bg-red-800 py-3 px-7 mr-4" target="_blank" href="https://season5.bankless.community/agenda">Agenda</a>
-            <a class="rounded-xl bg-white hover:bg-slate-200 py-3 px-7 text-gray-700 flex items-center justify-center" target="_blank" href="https://season5.bankless.community/space"><img class="mr-2" src="assets/images/twitter_space_grey.png" width="20px" height="100%" /> RSVP</a>
+            <a class="rounded-xl bg-white hover:bg-slate-200 py-3 px-7 text-gray-700 flex items-center justify-center" target="_blank" href="https://season5.bankless.community/space">RSVP</a>
           </div>
         </div>
         <div class="text-8xl font-bold fit bankless-font mt-8">BANKLESS</div>
@@ -297,7 +330,7 @@ Join the Bankless DAO dev team: https://discord.gg/MFC2eHjhGQ
           <span class="bankless-red-underline">HQ</span>
         </div>
       </div>
-      <img class="absolute bottom-6 lesson-launch right-2" src="assets/images/Seeason_5_launch.png" />
+      <img class="absolute bottom-2 lesson-launch right-4" src="assets/images/Seeason_5_launch.png" />
       <!-- Arrow up -->
       <div class="absolute top-8 right-8 cursor-pointer go-to-section-2 text-lg" style="text-align: -webkit-right">
         <div class="animate-bounce w-8 h-8">
